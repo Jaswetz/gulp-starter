@@ -23,3 +23,15 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('builds/assets/css'))
         .pipe(notify({ message: 'Styles task complete' }));
 });
+
+gulp.task('scripts', function() {
+    return gulp.src('builds/scripts/**/*.js')
+        .pipe(jshint('.jshintrc'))
+        .pipe(jshint.reporter('default'))
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('builds/assets/js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('builds/assets/js'))
+        .pipe(notify({ message: 'Scripts task complete' }));
+});
