@@ -13,6 +13,8 @@ var gulp = require('gulp'),
     styleguide = require('sc5-styleguide'),
     del = require('del');
 
+
+// Compile Sass
 gulp.task('styles', function() {
     return gulp.src('src/styles/main.scss')
         .pipe(sass({ style: 'expanded' }))
@@ -24,6 +26,7 @@ gulp.task('styles', function() {
         .pipe(notify({ message: 'Styles task complete' }));
 });
 
+// Compile JavaScript
 gulp.task('scripts', function() {
     return gulp.src('builds/scripts/**/*.js')
         .pipe(jshint('.jshintrc'))
@@ -34,4 +37,36 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(gulp.dest('builds/assets/js'))
         .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+// Compress Images
+gulp.task('images', function() {
+  return gulp.src('src/images/**/*')
+    .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+    .pipe(gulp.dest('build/assets/img'))
+    .pipe(notify({ message: 'Images task complete' }));
+});
+
+// Clean up!
+gulp.task('clean', function(cb) {
+    del(['build/assets/css', 'build/assets/js', 'build/assets/img'], cb)
+});
+
+// Build Task
+gulp.task('default', ['clean'], function() {
+    gulp.start('styles', 'scripts', 'images');
+});
+
+// Gulp Watch
+gulp.task('watch', function() {
+
+  // Watch .scss files
+  gulp.watch('src/styles/**/*.scss', ['styles']);
+
+  // Watch .js files
+  gulp.watch('src/scripts/**/*.js', ['scripts']);
+
+  // Watch image files
+  gulp.watch('src/images/**/*', ['images']);
+
 });
