@@ -1,6 +1,3 @@
-// http://webstoemp.com/blog/gulp-setup/
-
-
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
