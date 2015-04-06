@@ -1,4 +1,53 @@
+$primary-color: blue;
+
+
 body {
-    background: blue;
+    background: $primary-color;
 }
 
+// Colors and typography
+//
+// This section describes base colors and typography
+//
+// Styleguide 1.0
+
+// Main colors
+//
+// $primary-color - Primary color
+// $secondary-color - Secondary color
+// $primary-action-color - Primary button color
+// $default-action-color - Default button color and link color
+// $tertiary-color - Used for input hovers and hilights
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1
+
+// Calculated colors
+//
+// .color_lighten - Lighter than default action color
+// .color_darken - Darker than default action color
+//
+// markup:
+// <div class="styleguide-color {$modifiers}"></div>
+//
+// Styleguide 1.1.1
+
+// Buttons
+//
+// Buttons can and should be clicked.
+//
+// markup: <button class="button">Hello</button>
+//
+// :hover - Highlight the button when hovered.
+//
+// Styleguide 1.1.2
+.button {
+
+    color: $primary-color;
+
+  &:hover {
+    color: blue;
+  }
+}

@@ -1,10 +1,5 @@
 # Gulp-Starter
+Gulp Starter Is a small build process to help create content/styleguide first designs. 
 
-I am experimenting in building a workflow with Gulp for my new portfolio website.
 
-## Requienements
 
-- Live Reload
-- Live Generated Styleguide
-- Sass
-- Build and Development Environments

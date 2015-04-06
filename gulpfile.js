@@ -13,6 +13,8 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     styleguide = require('sc5-styleguide'),
     plumber = require('gulp-plumber'),
+    gutil = require('gulp-util');
+    outputPath = 'build/development/styleguide',
     del = require('del');
 
 // error function for plumber
@@ -125,9 +127,34 @@ gulp.task('devImg', function() {
     .pipe(notify({ message: 'Images task complete' }))
 });
 
+// All unprocessed styles containing the KSS markup and style variables.
+// This will process the KSS markup and collects variable information.
+gulp.task('styleguide:generate', function() {
+    return gulp.src('app/scss/*.scss')
+        .pipe(styleguide.generate({
+            title: 'My Styleguide',
+            rootPath: outputPath,
+            server: true,
+            port: '5000',
+            overviewPath: 'README.md'
+        }))
+        .pipe(gulp.dest(outputPath));
+});
+
+//Preprocessed/compiled stylesheets.
+// This will create necessary pseudo styles and create the actual stylesheet to be used in the styleguide.
+gulp.task('styleguide:applystyles', function() {
+    return gulp.src('app/scss/main.scss')
+        .pipe(sass({
+            errLogToConsole: true
+        }))
+        .pipe(styleguide.applyStyles())
+        .pipe(gulp.dest(outputPath));
+});
+
 // Clean up development!
 gulp.task('cleanDev', function(cb) {
-    del(['build/development/assets', 'build/development/*.html'], cb)
+    del(['build/development/assets', 'build/development/styleguide', 'build/development/*.html'], cb)
 });
 
 // Clean up production!
@@ -137,7 +164,7 @@ gulp.task('cleanBuild', function(cb) {
 
 // Watch task
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch('app/scss/**/*', ['styles']);
+    gulp.watch('app/scss/**/*', ['styles', 'styleguide']);
     gulp.watch('app/js/**/*', ['browsersync-reload', 'devJs', 'copyHtml']);
     gulp.watch('build/development/**/*', ['browsersync-reload']);
     gulp.watch('app/**/*.html', ['browsersync-reload', 'copyHtml']);
@@ -145,7 +172,7 @@ gulp.task('watch', ['browser-sync'], function () {
 });
 
 
+gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 gulp.task('serve',['cleanDev', 'devImg', 'devJs', 'copyHtml', 'styles', 'watch'], function() {});
 gulp.task('build',['cleanBuild', 'buildStyles', 'buildImg', 'buildJs', 'miniHtml'], function() {});
-
 
