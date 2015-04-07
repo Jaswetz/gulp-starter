@@ -4,3 +4,4 @@ node_modules
 .sass-cache
 build/**/images/*
 build/development
+bower_components
