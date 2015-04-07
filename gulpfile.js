@@ -130,7 +130,7 @@ gulp.task('devImg', function() {
 // All unprocessed styles containing the KSS markup and style variables.
 // This will process the KSS markup and collects variable information.
 gulp.task('styleguide:generate', function() {
-    return gulp.src('app/scss/*.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(styleguide.generate({
             title: 'My Styleguide',
             rootPath: outputPath,
@@ -163,7 +163,7 @@ gulp.task('cleanBuild', function(cb) {
 });
 
 // Watch task
-gulp.task('watch', ['browser-sync'], function () {
+gulp.task('watch', ['browser-sync', 'styleguide'], function () {
     gulp.watch('app/scss/**/*', ['styles', 'styleguide']);
     gulp.watch('app/js/**/*', ['browsersync-reload', 'devJs', 'copyHtml']);
     gulp.watch('build/development/**/*', ['browsersync-reload']);
@@ -173,6 +173,6 @@ gulp.task('watch', ['browser-sync'], function () {
 
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-gulp.task('serve',['cleanDev', 'devImg', 'devJs', 'copyHtml', 'styles', 'watch'], function() {});
+gulp.task('serve',['devImg', 'devJs', 'copyHtml', 'styles', 'watch'], function() {});
 gulp.task('build',['cleanBuild', 'buildStyles', 'buildImg', 'buildJs', 'miniHtml'], function() {});
 
