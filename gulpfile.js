@@ -166,13 +166,13 @@ gulp.task('cleanBuild', function(cb) {
 gulp.task('watch', ['browser-sync', 'styleguide'], function () {
     gulp.watch('app/scss/**/*', ['styles', 'styleguide']);
     gulp.watch('app/js/**/*', ['browsersync-reload', 'devJs', 'copyHtml']);
-    gulp.watch('build/development/**/*', ['browsersync-reload']);
     gulp.watch('app/**/*.html', ['browsersync-reload', 'copyHtml']);
     gulp.watch('app/img/**/*', ['browsersync-reload','devImg', 'copyHtml']);
+    gulp.watch('build/development/**/*', ['browsersync-reload', 'styleguide']);
 });
 
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-gulp.task('serve',['devImg', 'devJs', 'copyHtml', 'styles', 'watch'], function() {});
+gulp.task('serve',['cleanDev', 'styleguide', 'devImg', 'devJs', 'copyHtml', 'styles', 'watch'], function() {});
 gulp.task('build',['cleanBuild', 'buildStyles', 'buildImg', 'buildJs', 'miniHtml'], function() {});
 

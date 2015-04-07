@@ -1,4 +1,20 @@
+/* ==========================================================================
+   Main Scss File: Importing all other files
+   ========================================================================== */
+
+// External Libraries
+    @import "../../bower_components/susy/sass/susy";
+    @import "../../bower_components/breakpoint/breakpoint/breakpoint";
+
+// Base
+@import "base/vars";
+@import "base/normalize";
+@import "base/type";
+// @import "mixins";
+
+// Styleguide specific
 @import "styleguide";
 
-
-
+h1 {
+    background: blue;
+}
