@@ -2,4 +2,6 @@
 node_modules
 .tmp
 .sass-cache
-builds/**/images/*
+build/**/images/*
+build/development
+bower_components
