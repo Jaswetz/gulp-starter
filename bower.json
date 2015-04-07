@@ -1,0 +1,21 @@
+{
+  "name": "gulp-starter",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Jaswetz/gulp-starter",
+  "authors": [
+    "Jason Swetzoff <swetzoff@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint": "~4.6.4",
+    "normalize": "~1.0.4",
+    "susy": "~2.2.2"
+  }
+}
