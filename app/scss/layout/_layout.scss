@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Layout - Main layout file
+   ========================================================================== */
+
+// Layout
+//
+// The layout/ folder contains everything that takes part in laying out the
+// site or application. This folder could have stylesheets for the main parts of
+// the site (header, footer, navigation, sidebar...), the grid system or even CSS
+// styles for all the forms.
+//
+// Styleguide 3.0
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $grayLight;
+}
+
+.section {
+    @extend .pad-bottom-double;
+    @extend .pad-top-double;
+    position: relative
+}
+
+.intro {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    max-width: none;
+    height: 95vh;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    background: url(../img/bg-night.jpg) no-repeat center center fixed;
+    background-color: $grayDark;
+    background-size: cover;
+}

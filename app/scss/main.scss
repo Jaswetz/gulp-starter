@@ -3,18 +3,24 @@
    ========================================================================== */
 
 // External Libraries
-    @import "../../bower_components/susy/sass/susy";
-    @import "../../bower_components/breakpoint/breakpoint/breakpoint";
+@import "../../bower_components/susy/sass/susy";
+@import "../../bower_components/breakpoint/breakpoint/breakpoint";
+
+// Fonts
+@import url("http://fonts.googleapis.com/css?family=PT+Serif:700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600");
+
+// Utils
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/helpers";
 
 // Base
-@import "base/vars";
 @import "base/normalize";
+@import "base/base";
 @import "base/type";
-// @import "mixins";
 
-// Styleguide specific
-@import "styleguide";
+// Layout
+@import "layout/layout";
 
-h1 {
-    background: blue;
-}
+
