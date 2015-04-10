@@ -67,10 +67,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $fontHeaderWeight;
 }
 
+.yotta,
+.zetta {
+  font-family: $fontDefault;
+}
+
 .yotta {
   font-size: 2.2807rem;
   line-height: 1.3154;
   color: $colorHighlight;
+  font-weight: $fontWeightBold;
+  text-transform: uppercase;
 }
 
 .zetta {

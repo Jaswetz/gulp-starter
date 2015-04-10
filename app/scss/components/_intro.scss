@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Intro - Landing area
+   ========================================================================== */
+
+.intro {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    max-width: none;
+    height: 95vh;
+    margin: 2.5% 2.5% 2.5% 2.5%;
+    background: url(../img/bg-tools.jpg) no-repeat center center fixed;
+    background-color: $grayDark;
+    background-size: cover;
+
+    .hgroup {
+        padding: ($baseSpacing * 10) 0;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        padding: 0% 20%;
+
+        h1, h2 {
+            color: $white;
+        }
+
+        .normal {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+

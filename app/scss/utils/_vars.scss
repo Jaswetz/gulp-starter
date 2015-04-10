@@ -42,6 +42,7 @@ $red: #cb4437;
 $redSecondary: lighten($red, 30%);
 $yellow: #f4b400;
 $yellowSecondary: lighten($yellow, 20%);
+$white: white;
 $gray: #737373;
 $grayLight: #eeeeee;
 $grayDark: #404040;
@@ -58,6 +59,7 @@ $fontHeader: 'PT Serif', Georgia, serif;
 
 // Defining font weight
 $fontWeight: normal;
+$fontWeightBold: 900;
 $fontHeaderWeight: 700;
 
 // Defining baseline line height
@@ -65,3 +67,6 @@ $lineHeight: 1.5;
 
 // Defining animation easings
 $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
+
+// Base spacing
+$baseSpacing: 1.5rem;

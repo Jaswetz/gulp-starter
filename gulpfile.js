@@ -27,7 +27,6 @@ var onError = function (err) {
 // Browser definitions for autoprefixer
 var AUTOPREFIXER_BROWSERS = [
   'last 3 versions',
-  'ie >= 8',
   'ios >= 7',
   'android >= 4.4',
   'bb >= 10'
@@ -56,8 +55,8 @@ gulp.task('styles', function() {
     return gulp.src('app/scss/main.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass({ style: 'expanded' }))
-        .pipe(gulp.dest('build/development/assets/css'))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe(gulp.dest('build/development/assets/css'))
         .pipe(browsersync.reload({ stream:true }))
 });
 
@@ -66,8 +65,8 @@ gulp.task('buildStyles', function() {
     return gulp.src('app/scss/main.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass({ style: 'expanded' }))
-        .pipe(gulp.dest('build/production/assets/css'))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe(gulp.dest('build/production/assets/css'))
         .pipe(rename({ suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest('build/production/assets/css'))

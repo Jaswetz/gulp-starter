@@ -23,16 +23,3 @@ body {
     @extend .pad-top-double;
     position: relative
 }
-
-.intro {
-    display: table;
-    position: absolute;
-    bottom: 0;
-    width: 95%;
-    max-width: none;
-    height: 95vh;
-    margin: 2.5% 2.5% 2.5% 2.5%;
-    background: url(../img/bg-night.jpg) no-repeat center center fixed;
-    background-color: $grayDark;
-    background-size: cover;
-}
