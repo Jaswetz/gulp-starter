@@ -2,6 +2,13 @@
    Helper classes - Class & placeholders helpers
    ========================================================================== */
 
+// Helper Classes
+//
+// Small classes that help.
+//
+// Styleguide 4.0
+
+
 /*
  * Hide visually and from screen readers:
  */
@@ -74,6 +81,11 @@
   }
 }
 
+// Text helpers
+//
+// Classes for styling and placing text.
+//
+// Styleguide 4.1
 
 .text-left {
   text-align: left;
@@ -98,6 +110,12 @@
 .italic {
   font-style: italic;
 }
+
+// Spacing helpers
+//
+// Classes for margins and padding.
+//
+// Styleguide 4.2
 
 .push {
   margin-bottom: 1.5rem;
@@ -185,4 +203,33 @@
 .gutter-quarter, .gutter-1-4 {
   padding-left: 0.3750rem;
   padding-right: 0.3750rem;
+}
+
+// List helpers
+//
+// Help styling lists
+//
+// Styleguide 4.3
+
+// Inline lists
+//
+// Help styling lists
+//
+// markup:
+// <ul class="listInline">
+//   <li><a>About</a></li>
+//   <li><a>Work</a></li>
+//   <li><a>Contact</a></li>
+// </ul>
+//
+// Styleguide 4.3.1
+
+.listInline {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    display: inline-block;
+  }
 }

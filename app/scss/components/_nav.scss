@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Main Navigation
+   ========================================================================== */
+
+.mainNav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.navbar {
+
+    padding-left: 8%;
+    padding-right: 8%;
+
+    .brand {
+        float: left;
+    }
+
+    > ul {
+        float: right;
+
+        a {
+            @extend .gutter-half;
+
+            &:hover {
+                background: rgba(255,255,255, .25);
+            }
+        }
+    }
+
+    .brand,
+    > ul {
+        a {
+            text-align: center;
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            @extend .pad-top-double;
+            @extend .pad-bottom-double;
+        }
+    }
+}
+
+
+
