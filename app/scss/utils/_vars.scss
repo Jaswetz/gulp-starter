@@ -2,7 +2,17 @@
    Variables
    ========================================================================== */
 
+// Grid System
+$susy: (
+    columns: 12,
+    container: 60em,
+    gutters: (1/4),
+    gutter-position: inside,
+    global-box-sizing: border-box
+);
+
 // Defining breakpoints
+$small: 400px !default;
 $medium: 620px !default;
 $wide: 800px !default;
 $huge: 1600px !default;

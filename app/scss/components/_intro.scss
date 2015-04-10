@@ -3,9 +3,7 @@
    ========================================================================== */
 
 .intro {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+
     display: table;
     width: 95%;
     max-width: none;
@@ -31,6 +29,33 @@
             font-size: 1.8rem;
         }
     }
+
+    .downArrow {
+        margin-top: $baseSpacing;
+        color: $white;
+        text-decoration: none;
+        font-size: 2rem;
+        border: .2rem solid $white;
+
+        border-radius: 50%;
+        padding: 0 .75rem;
+
+    }
 }
 
+
+.projects {
+    @include container(100%);
+
+    > ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+     @include gallery((2 of 4));
+     @include gutters(0);
+
+        }
+    }
+}
 

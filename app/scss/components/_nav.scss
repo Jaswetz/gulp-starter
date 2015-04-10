@@ -9,9 +9,8 @@
 }
 
 .navbar {
-
-    padding-left: 8%;
     padding-right: 8%;
+    padding-left: 8%;
 
     .brand {
         float: left;
@@ -24,21 +23,22 @@
             @extend .gutter-half;
 
             &:hover {
-                background: rgba(255,255,255, .25);
+                background: rgba(255,255,255, 0.25);
             }
         }
     }
 
     .brand,
     > ul {
+
         a {
+            @extend .pad-top-double;
+            @extend .pad-bottom-double;
             text-align: center;
-            color: $white;
             text-decoration: none;
             text-transform: uppercase;
             display: block;
-            @extend .pad-top-double;
-            @extend .pad-bottom-double;
+            color: $white;
         }
     }
 }
