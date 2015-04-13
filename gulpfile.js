@@ -15,6 +15,9 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     gutil = require('gulp-util');
     outputPath = 'build/development/styleguide',
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    inject = require('gulp-inject'),
     del = require('del');
 
 // error function for plumber
@@ -75,7 +78,16 @@ gulp.task('buildStyles', function() {
 
 // Minify HTML
 gulp.task('miniHtml', function() {
+    var svgs = gulp.src('app/svg/*.svg')
+        .pipe(rename({prefix: 'icn-'}))
+        .pipe(svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
   gulp.src('app/**/*.html')
+    .pipe(inject(svgs, { transform: fileContents }))
     .pipe(minifyHTML())
     .pipe(gulp.dest('build/production/'))
     .pipe(notify({ message: 'HTML Minified' }))
@@ -83,32 +95,63 @@ gulp.task('miniHtml', function() {
 
 // Move HTML
 gulp.task('copyHtml', function() {
+
+    var svgs = gulp.src('app/svg/*.svg')
+        .pipe(rename({prefix: 'icn-'}))
+        .pipe(svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
     gulp.src('app/*.html')
+      .pipe(inject(svgs, { transform: fileContents }))
       .pipe(gulp.dest('build/development'))
       .pipe(browsersync.reload({ stream:true }))
 });
 
-// Compile JavaScript
-gulp.task('buildJs', function() {
-    return gulp.src('app/js/**/*.js')
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('default'))
+
+// // Compile Build JavaScript
+// gulp.task('buildJs', function() {
+
+//     return gulp.src('app/js/*.js')
+//         .pipe(jshint('.jshintrc'))
+//         .pipe(jshint.reporter('default'))
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('build/production/assets/js'))
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('build/production/assets/js'))
+//         .pipe(notify({ message: 'Scripts task complete' }));
+
+//     return gulp.src('app/js/vendor/**/*.js')
+//         .pipe(jshint('.jshintrc'))
+//         .pipe(jshint.reporter('default'))
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('build/production/assets/js/vendor'))
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('build/production/assets/js/vendor'))
+//         .pipe(notify({ message: 'Scripts task complete' }));
+// });
+
+// Compile Development JavaScript
+gulp.task('devJs', function() {
+
+    gulp.src('bower_components/modernizr/modernizr.js')
+        .pipe(gulp.dest('build/development/assets/js/vendor'));
+
+    gulp.src('bower_components/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest('build/development/assets/js/vendor'));
+
+    gulp.src('app/js/main.js')
+        // .pipe(jshint('.jshintrc'))
+        // .pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
-        .pipe(gulp.dest('build/production/assets/js'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('build/production/assets/js'))
-        .pipe(notify({ message: 'Scripts task complete' }))
+        .pipe(gulp.dest('build/development/assets/js'));
 });
 
-// Compile JavaScript
-gulp.task('devJs', function() {
-    return gulp.src('app/js/**/*.js')
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('build/development/assets/js'))
-});
+
 
 // Compress Images to Build folder
 gulp.task('buildImg', function() {
@@ -166,12 +209,13 @@ gulp.task('watch', ['browser-sync', 'styleguide'], function () {
     gulp.watch('app/scss/**/*', ['styles', 'styleguide']);
     gulp.watch('app/js/**/*', ['browsersync-reload', 'devJs', 'copyHtml']);
     gulp.watch('app/**/*.html', ['browsersync-reload', 'copyHtml']);
+    gulp.watch('app/svg/*.svg', ['browsersync-reload', 'copyHtml']);
     gulp.watch('app/img/**/*', ['browsersync-reload','devImg', 'copyHtml']);
-    gulp.watch('build/development/**/*', ['browsersync-reload', 'styleguide']);
+    // gulp.watch('build/development/**/*', ['browsersync-reload', 'styleguide']);
 });
 
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-gulp.task('serve',['cleanDev', 'styleguide', 'devImg', 'devJs', 'copyHtml', 'styles', 'watch'], function() {});
+gulp.task('serve', [ 'styleguide', 'devImg', 'devJs', 'copyHtml', 'styles', 'watch']);
 gulp.task('build',['cleanBuild', 'buildStyles', 'buildImg', 'buildJs', 'miniHtml'], function() {});
 

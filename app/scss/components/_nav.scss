@@ -5,43 +5,91 @@
 .mainNav {
     position: fixed;
     z-index: 5;
+    top: 0;
     width: 100%;
 }
 
 .navbar {
-    padding-right: 8%;
-    padding-left: 8%;
+    transition: all .5s ease-in-out;
 
-    .brand {
-        float: left;
+    .logo,
+    .nav-item {
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        color: $white;
+        transition: all 0.5s ease-in-out;
     }
 
-    > ul {
-        float: right;
+    .nav-item {
+        padding: ($baseSpacing * .5) 0;
 
-        a {
-            @extend .gutter-half;
-
-            &:hover {
-                background: rgba(255,255,255, 0.25);
-            }
+        @include breakpoint(tablet){
+            padding: ($baseSpacing * 2) 0;
         }
     }
 
-    .brand,
-    > ul {
+    .logo {
+        padding-top: $baseSpacing * .5;
+        text-align: center;
+
+        .icn-logo {
+            width: 50px;
+            height: 50px;
+            fill: $white;
+            stroke: $white;
+        }
+
+        @include breakpoint(tablet) {
+            text-align: left;
+            padding-top: $baseSpacing * 2;
+        }
+    }
+
+    > ul li {
 
         a {
-            @extend .pad-top-double;
-            @extend .pad-bottom-double;
             text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: block;
-            color: $white;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.25);
+            }
         }
     }
 }
 
 
+/*
+   Header animation on scroll
+   ========================================================================== */
+
+.js-navbar.scrollNav {
+    background: $white;
+    border-bottom: .2rem solid $blue;
+
+    .logo,
+    .nav-item {
+        color: $blue;
+        padding: ($baseSpacing * .5) 0;
+
+        @include breakpoint(tablet) {
+             padding: $baseSpacing 0;
+        }
+
+    }
+
+    .brand {
+       position: absolute;
+       top: -10rem;
+
+       .icn-logo {
+            fill: $blue;
+            stroke: $blue;
+       }
+
+       @include breakpoint(tablet) {
+            position: inherit;
+       }
+    }
+}
 

@@ -3,15 +3,26 @@
    ========================================================================== */
 
 .intro {
-
     display: table;
-    width: 95%;
+    width: 100%;
     max-width: none;
-    height: 95vh;
-    margin: 2.5vh 2.5% 2.5vh 2.5%;
-    background: url(../img/bg-tools.jpg) no-repeat center center fixed;
-    background-color: $grayDark;
+    height: 100vh;
+    margin: 0;
+    background: url(../img/bg-tools--small.jpg) no-repeat center center fixed;
+    background-color: $blue;
     background-size: cover;
+
+    // @include breakpoint(tablet) {
+    //     width: 96.666666%;
+    //     max-width: none;
+    //     height: 95vh;
+    //     margin: 2.5vh 1.66667% 2.5vh 1.66667%;
+    //     background-image: url(../img/bg-tools--med.jpg);
+    // }
+
+    @include breakpoint(laptop) {
+        background-image: url(../img/bg-tools--large.jpg);
+    }
 
     .hgroup {
         text-align: center;
@@ -19,29 +30,44 @@
         display: table-cell;
         height: 100%;
         padding: ($baseSpacing * 10) 0;
-        padding: 0% 20%;
+        padding: 0% 10%;
 
-        h1, h2 {
-            color: $white;
+        @include breakpoint(tablet) {
+            padding: 0% 20%;
         }
 
-        .normal {
-            font-size: 1.8rem;
+        .introHeader {
+            @extend .yotta;
+            font-size: 1.6018rem;
+            line-height: 1.5;
+            color: $white;
+
+            @include breakpoint(tablet) {
+              font-size: 2.2807rem;
+              line-height: 1.3154;
+            }
+
+            .normal {
+                font-size: 1.2rem;
+
+                @include breakpoint(tablet) {
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 
     .downArrow {
-        margin-top: $baseSpacing;
-        color: $white;
+        font-size: $baseSpacing;
         text-decoration: none;
-        font-size: 2rem;
-        border: .2rem solid $white;
-
+        margin-top: $baseSpacing;
+        padding: 0 0.6rem;
+        color: $white;
+        border: 0.2rem solid $white;
         border-radius: 50%;
-        padding: 0 .75rem;
-
     }
 }
+
 
 
 .projects {
@@ -52,10 +78,13 @@
         padding: 0;
 
         li {
-     @include gallery((2 of 4));
-     @include gutters(0);
-
+            @include gallery((2 of 4));
         }
+    }
+
+
+    img {
+        width: 100%;
     }
 }
 

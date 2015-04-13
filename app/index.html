@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title></title>
+    <script src="assets/js/vendor/modernizr.js"></script>
+    <script type="application/ample+xml" src="assets/svg/sprite.svg"></script>
+    <title>Jason's Portfolio</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -22,34 +24,46 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
 
   </head>
   <body>
     <header>
       <nav class="mainNav">
-        <div class="navbar">
-          <div class="brand"><a href="#welcome">Jason</a></div>
+        <div class="navbar js-navbar">
+          <div class="brand">
+              <a href="/" alt="Jason Swetzoff Logo" class="logo">
+                <svg class="icn-logo">
+                  <use xlink:href="#icn-logo"></use>
+                </svg>
+            </a>
+          </div>
           <ul class="listInline">
-            <li><a href="">About</a></li>
-            <li><a href="">Work</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#work" class="nav-item">Work</a></li>
+            <li><a href="" class="nav-item">Contact</a></li>
           </ul>
         </div><!-- navbar -->
       </nav>
       <div class="intro">
         <div class="hgroup">
-          <h1 class="yotta">I build beautiful <span class="normal italic">&</span> usable web and mobile products.</h1>
-          <p><a href="#welcome" class="downArrow" alt="down arrow">&#8675;</a></p>
+          <h1 class="introHeader">I build beautiful <span class="normal italic">&</span> usable web and mobile products.</h1>
+          <p><a href="#about" class="downArrow" alt="down arrow">&#8675;</a></p>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="welcome"></section>
+      <section id="about" class="about section">
+        <div class="about__wrapper">
+          <figure class="about__img">
+            <img src="assets/img/jason.png" alt="">
+          </figure>
+          <div class="about__text">
+            <h1>A kid playing with his Legos, that's how I feel.</h1>
+            <p>I'm Jason and I've got a passion for creating. I enjoy the process as much as I do the final product. I believe in iteration and communication. I'm self-taught and never stop learning. My goal is to meet awesome people, create excellent things, and continue growing.</p>
+          </div>
+        </div>
+      </section>
       <section class="section projects">
         <ul>
           <li><img src="http://placeimg.com/500/300/any" alt=""></li>
@@ -59,6 +73,9 @@
         </ul>
       </section>
     </main>
+
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -70,5 +87,9 @@
       ga('send', 'pageview');
     </script>
     <!-- Built with love using Web Starter Kit -->
+
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+    <!-- inject:svg --><!-- endinject -->
+    </div>
   </body>
 </html>
