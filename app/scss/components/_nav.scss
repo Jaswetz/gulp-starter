@@ -24,23 +24,32 @@
     .nav-item {
         padding: ($baseSpacing * .5) 0;
 
-        @include breakpoint(tablet){
+        @include breakpoint(phablet){
             padding: ($baseSpacing * 2) 0;
         }
     }
 
     .logo {
-        padding-top: $baseSpacing * .5;
         text-align: center;
+        margin-top: $baseSpacing * .5;
 
-        .icn-logo {
-            width: 50px;
-            height: 50px;
-            fill: $white;
-            stroke: $white;
+        @include breakpoint(phablet){
+            padding-top: 0;
         }
 
-        @include breakpoint(tablet) {
+        .icn-logo {
+            width: 40px;
+            height: 40px;
+            fill: $white;
+            stroke: $white;
+
+             @include breakpoint(phablet){
+                width: 50px;
+                height: 50px;
+             }
+        }
+
+        @include breakpoint(phablet) {
             text-align: left;
             padding-top: $baseSpacing * 2;
         }
@@ -72,7 +81,7 @@
         color: $blue;
         padding: ($baseSpacing * .5) 0;
 
-        @include breakpoint(tablet) {
+        @include breakpoint(phablet) {
              padding: $baseSpacing 0;
         }
 
@@ -87,7 +96,7 @@
             stroke: $blue;
        }
 
-       @include breakpoint(tablet) {
+       @include breakpoint(phablet) {
             position: inherit;
        }
     }

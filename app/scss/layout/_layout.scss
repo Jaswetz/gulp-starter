@@ -41,7 +41,7 @@ main {
     .brand {
         @include span(full);
 
-         @include breakpoint(tablet){
+         @include breakpoint(phablet){
             @include span(6);
          }
 
@@ -53,7 +53,7 @@ main {
     > ul li {
         @include span(4 of $nav_layout);
 
-        @include breakpoint(tablet){
+        @include breakpoint(phablet){
             @include span(2 of $nav_layout);
         }
 
@@ -75,7 +75,7 @@ main {
     }
 
     .about__img {
-         @include span(full);
+        @include span(full);
 
         @include breakpoint(phablet) {
             @include span(4);
