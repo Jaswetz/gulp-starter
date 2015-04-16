@@ -13,11 +13,12 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     styleguide = require('sc5-styleguide'),
     plumber = require('gulp-plumber'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
     outputPath = 'build/development/styleguide',
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
     inject = require('gulp-inject'),
+    sourcemaps = require('gulp-sourcemaps'),
     del = require('del');
 
 // error function for plumber
@@ -57,10 +58,13 @@ gulp.task('fileinclude', function() {
 gulp.task('styles', function() {
     return gulp.src('app/scss/main.scss')
         .pipe(plumber({ errorHandler: onError }))
+        .pipe(sourcemaps.init())
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/development/assets/css'))
         .pipe(browsersync.reload({ stream:true }))
+
 });
 
 // Compile Sass to Production
