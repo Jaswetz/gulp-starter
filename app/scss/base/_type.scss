@@ -18,30 +18,18 @@
 html {
   font-size: 100%;
   @extend .sg-style;
-}
 
-@media only screen and (min-width: 60em) {
-
-  html {
+  @include breakpoint(tablet) {
     font-size: 110%;
   }
 
-}
-
-@media only screen and (min-width: 90em) {
-
-  html {
+  @include breakpoint(desktop) {
     font-size: 120%;
   }
 
-}
-
-@media only screen and (min-width: 120em) {
-
-  html {
+  @include breakpoint(largeScreen) {
     font-size: 130%;
   }
-
 }
 
 // Headings

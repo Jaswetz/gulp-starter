@@ -30,67 +30,52 @@ main {
     clear: both;
 }
 
-
 /*
    #Nav
    ========================================================================== */
 
 .navbar {
     @include full;
-
     .brand {
         @include span(full);
-
-         @include breakpoint(tablet){
+        @include breakpoint(phablet) {
             @include span(6);
-         }
-
-        @include breakpoint(laptop){
-            @include span(9);
-         }
-    }
-
-    > ul li {
-        @include span(4 of $nav_layout);
-
-        @include breakpoint(tablet){
-            @include span(2 of $nav_layout);
         }
 
-         @include breakpoint(laptop){
+        @include breakpoint(laptop) {
+            @include span(9);
+        }
+    }
+    > ul li {
+        @include span(4 of $nav_layout);
+        @include breakpoint(phablet) {
+            @include span(2 of $nav_layout);
+        }
+        @include breakpoint(laptop) {
             @include span(1 of $nav_layout);
         }
     }
 }
 
-
-
 /*
    #About
    ========================================================================== */
 .about {
-
     .about__wrapper {
         @include container(50em);
     }
-
     .about__img {
-         @include span(full);
-
+        @include span(full);
         @include breakpoint(phablet) {
             @include span(4);
         }
     }
-
     .about__text {
         @include span(full);
         text-align: center;
-
         @include breakpoint(phablet) {
             @include span(8);
             text-align: left;
         }
     }
 }
-
-
