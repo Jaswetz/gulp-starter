@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.social-wrap {
+    background: $blue;
+    text-align: center;
+}
+
+.social {
+    @extend .listInline;
+    display: block;
+
+    li {
+        text-align: center;
+    }
+
+    li a {
+        text-align: middle;
+        vertical-align: middle;
+        display: inline-block;
+        padding: $baseSpacing * 0.5;
+    }
+    svg {
+        width: 25px;
+        height: 25px;
+
+        fill: white;
+    }
+}
+
+.thanks {
+    background: $blueSecondary;
+    text-align: center;
+}
+

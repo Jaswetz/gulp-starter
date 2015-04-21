@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/vendor/modernizr.js"></script>
-    <script type="application/ample+xml" src="assets/svg/sprite.svg"></script>
     <title>Jason's Portfolio</title>
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -24,7 +23,6 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-
   </head>
   <body>
     <header>
@@ -40,7 +38,7 @@
           <ul class="listInline">
             <li><a href="#about" class="nav-item">About</a></li>
             <li><a href="#work" class="nav-item">Work</a></li>
-            <li><a href="" class="nav-item">Contact</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
           </ul>
         </div><!-- navbar -->
       </nav>
@@ -54,32 +52,159 @@
 
     <main>
       <section id="about" class="about section">
-        <div class="about__wrapper">
+        <h1 class="title">About</h1>
+        <article class="about__wrapper">
           <figure class="about__img">
             <img src="assets/img/jason--small.png" alt="">
           </figure>
           <div class="about__text">
-            <h1>A kid playing with his Legos, that's how I feel.</h1>
+            <h2>A kid playing with his Legos, that's how I feel.</h2>
             <p>I'm Jason and I've got a passion for creating. I enjoy the process as much as I do the final product. I believe in iteration and communication. I'm self-taught and never stop learning. My goal is to meet awesome people, create excellent things, and continue growing.</p>
           </div>
-        </div>
+        </article>
+        <span class="js-triggerSkillAnimation"></span>
+        <article class="skill">
+          <div class="skill-wrap">
+            <svg class="icn icn-design" id="animation-1">
+              <use xlink:href="#icn-design"></use>
+            </svg>
+            <h3>Design</h3>
+            <p>I design aesthetically pleasing, readable, browsable, and responsive content. I like to use an iterative process, I start fantastical and then strip the design down to only the optimal.</p>
+          </div>
+        </article>
+        <article class="skill">
+          <div class="skill-wrap" >
+            <svg class="icn icn-front-end" id="animation-2">
+              <use xlink:href="#icn-front-end"></use>
+            </svg>
+            <h3>Front-End</h3>
+            <p>I build accessible interactive content that solves problems. I keep code semantic and optimized by following best practices.</p>
+          </div>
+        </article>
+        <article class="skill">
+          <div class="skill-wrap">
+            <svg class="icn icn-ux" id="animation-3">
+              <use xlink:href="#icn-ux"></use>
+            </svg>
+            <h3>User Experience</h3>
+            <p>I strive to create a better relationship between humans and technology by creating an intuitive experience. My goal is not to dazzle or force the user but allow the user to follow their own flow.</p>
+          </div>
+        </article>
       </section>
-      <section class="section projects">
-        <ul>
-          <li>
-          <figure class="effect-chico">
-            <img src="http://placeimg.com/1000/650/any" alt="">
-            <figcaption>
-            <p>Househappy is a photo-driven global real estate search portal. Buyers, sellers, and agents can connect and search homes for sale. </p>
-            </figcaption>
-          </figure>
-          </li>
-          <li><img src="http://placeimg.com/1000/650/any" alt=""></li>
-          <li><img src="http://placeimg.com/1000/650/any" alt=""></li>
-          <li><img src="http://placeimg.com/1000/650/any" alt=""></li>
-        </ul>
+      <section class="section projects" id="work">
+          <h1 class="title">Work</h1>
+          <article class="project">
+              <div class="project__img">
+                <img src="assets/img/img_househappy.jpg" alt="">
+              </div>
+              <div class="project__info">
+                <h2>Househappy Web App</h2>
+                <p>As a UX designer at Househappy I worked on many different features, including a full redesign and rewrite of styles, making the design and code more moduler. I also helped design and develop new features.</p>
+                <p class="tags">
+                  <span>User Experience</span>
+                  <span>Scss</span>
+                  <span>HTML5</span>
+                  <span>Spine.js</span>
+                  <span>Ruby</span>
+                  <span>Wireframing</span>
+                  <span>Design</span>
+                </p>
+              </div>
+          </article>
+          <article class="project">
+              <div class="project__img">
+                <img src="assets/img/househappy-app.jpg" alt="">
+              </div>
+              <div class="project__info">
+                <h2>Househappy iOS App</h2>
+                <p>As a UX designer at Househappy I was responsible for user experience, prototyping, and designing both Househappy's iPhone and iPad app.</p>
+                <p class="tags">
+                  <span>User Experience</span>
+                  <span>Wireframing</span>
+                  <span>Design</span>
+                </p>
+              </div>
+          </article>
+          <article class="project">
+              <div class="project__img">
+                <img src="assets/img/img_portfolio.jpg" alt="">
+              </div>
+              <div class="project__info">
+                <h2>Portfolio Site v1</h2>
+                <p>As a UX designer at Househappy I worked on many different features, including a full redesign and rewrite of styles, making the design and code more moduler. I also helped design and develop new features.</p>
+                <p class="tags">
+                  <span>User Experience</span>
+                  <span>Scss</span>
+                  <span>HTML5</span>
+                  <span>Middleman</span>
+                  <span>Responsive Design</span>
+                  <span>Design</span>
+                </p>
+              </div>
+          </article>
+          <article class="project">
+              <div class="project__img">
+                <img src="assets/img/img_design4.jpg" alt="">
+              </div>
+              <div class="project__info">
+                <h2>Jerhel Redesign</h2>
+                <p>Redesign Jerhel's website. Make all interactions more user friendly. Make website usable on all devices</p>
+                <p class="tags">
+                  <span>User Experience</span>
+                  <span>Compass</span>
+                  <span>HTML5</span>
+                  <span>Responsive Design</span>
+                  <span>Design</span>
+                  <span>AngularJs</span>
+                  <span>Laravel</span>
+                </p>
+              </div>
+          </article>
       </section>
     </main>
+    <footer class="mainFooter">
+      <div class="thanks zetta" id="contact">
+          Thanks for stopping by! Please, get in touch if you have any questions.
+          <a id="contact-link" href="mailto:swetzoff@gmail.com">
+          <svg class="icn-mail">
+          <use xlink:href="#icn-mail"></use>
+          </svg>
+          </a>
+      </div>
+      <div class="social-wrap">
+        <ul class="social">
+          <li><a href="https://twitter.com/Jaswetz">
+            <svg class="icn-twitter">
+              <use xlink:href="#icn-twitter"></use>
+            </svg>
+          </a></li>
+          <li><a href="http://dribbble.com/Jaswetz">
+              <svg class="icn-dribbble">
+                <use xlink:href="#icn-dribbble"></use>
+              </svg>
+          </a></li>
+          <li><a href="https://github.com/Jaswetz">
+              <svg class="icn-github">
+                <use xlink:href="#icn-github"></use>
+              </svg>
+          </a></li>
+          <li><a href="http://www.linkedin.com/in/swetzoff">
+              <svg class="icn-linkedin">
+                <use xlink:href="#icn-linkedin"></use>
+              </svg>
+          </a></li>
+          <li>
+              <address>
+                  <a id="contact-link" href="mailto:swetzoff@gmail.com">
+                    <svg class="icn-mail">
+                      <use xlink:href="#icn-mail"></use>
+                    </svg>
+                  </a>
+              </address>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="assets/js/vendor/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
@@ -93,10 +218,9 @@
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
     </script>
-    <!-- Built with love using Web Starter Kit -->
 
-    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
-    <!-- inject:svg --><!-- endinject -->
-    </div>
   </body>
 </html>
+<div style="height: 0; width: 0; position: absolute; visibility: hidden; display: none;">
+<!-- inject:svg --><!-- endinject -->
+</div>

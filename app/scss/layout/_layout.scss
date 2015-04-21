@@ -12,6 +12,8 @@
 // Styleguide 3.0
 
 body {
+    margin: 0;
+    padding: 0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,7 +25,6 @@ main {
 
 .section {
     @extend .pad-bottom-double;
-    @extend .pad-top-double;
     @include full;
     @extend .clearfix;
     position: relative;
@@ -79,3 +80,71 @@ main {
         }
     }
 }
+
+/*
+   #Skills
+   ========================================================================== */
+
+.skill {
+    text-align: center;
+    @include breakpoint(tablet) {
+        @include span(4);
+    }
+}
+
+
+/*
+   #Projects
+   ========================================================================== */
+
+.section.projects {
+    padding-bottom: 0;
+}
+
+.project {
+    @include full;
+}
+
+.project__img {
+    @include breakpoint(phablet) {
+        @include span(4);
+    }
+}
+.project__info {
+    @include breakpoint(phablet) {
+        @include span(8);
+    }
+}
+
+
+/*
+   Design Examples
+   ========================================================================== */
+
+.examples {
+    .examples__wrapper {
+       @include span(12);
+    }
+    .examples__imgs {
+        @include breakpoint(tablet) {
+            li {
+                @include span(6 of $gallery_layout);
+            }
+        }
+    }
+}
+
+
+/*
+   Footer
+   ========================================================================== */
+
+.social-wrap {
+    @include span(full);
+}
+
+.thanks {
+    @include span(12);
+}
+
+

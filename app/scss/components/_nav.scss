@@ -64,6 +64,10 @@
         padding: ($baseSpacing * 0.5) 0;
         color: $blue;
 
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
     }
     .brand {
         position: absolute;

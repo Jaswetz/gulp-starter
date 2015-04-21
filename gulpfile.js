@@ -148,7 +148,7 @@ gulp.task('devJs', function() {
     gulp.src('bower_components/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('build/development/assets/js/vendor'));
 
-    gulp.src('app/js/main.js')
+    gulp.src(['bower_components/greensock/src/uncompressed/TweenMax.js', 'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js', 'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js', 'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js', 'app/js/main.js'])
         // .pipe(jshint('.jshintrc'))
         // .pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
