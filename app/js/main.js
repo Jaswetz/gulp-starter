@@ -50,12 +50,9 @@ $(window).load(function() {
   equalheight('.skill');
 });
 
-
 $(window).resize(function(){
   equalheight('.skill');
 });
-
-
 
 
 $( function() {
@@ -95,6 +92,7 @@ $( function() {
         {opacity: 0, scale: 0},
         {delay: .4, opacity: 1, scale: 1, ease: Back.easeOut});
 
+
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: ".js-triggerSkillAnimation"})
         .setTween(skillTween1)
@@ -108,7 +106,9 @@ $( function() {
         .setTween(skillTween3)
         .addTo(controller);
 
+
     onScroll_fn();
+
 });
 
 

@@ -8,6 +8,20 @@
     margin-bottom: $baseSpacing;
     border: 0.1rem solid $grayLight;
     text-align: center;
+    h2 {
+        @extend %transition-default;
+    }
+    a {
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+            h2 {
+                text-decoration: none;
+                color: lighten($blue, 10%);
+            }
+        }
+    }
     @include breakpoint(phablet) {
         text-align: left;
         h2 {

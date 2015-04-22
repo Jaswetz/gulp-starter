@@ -42,6 +42,7 @@
         }
     }
     .downArrow {
+        @extend %transition-default;
         font-size: $baseSpacing;
         text-decoration: none;
         margin-top: $baseSpacing;
@@ -49,5 +50,10 @@
         color: $white;
         border: 0.2rem solid $white;
         border-radius: 50%;
+        &:hover,
+        &:active,
+        &:focus {
+            opacity: 0.75;
+        }
     }
 }

@@ -11,19 +11,35 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+
   </head>
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden; display: none;">
+  <!-- inject:svg --><!-- endinject -->
+  </div>
   <body>
     <header>
       <nav class="mainNav">
@@ -63,43 +79,49 @@
           </div>
         </article>
         <span class="js-triggerSkillAnimation"></span>
-        <article class="skill">
-          <div class="skill-wrap">
-            <svg class="icn icn-design" id="animation-1">
-              <use xlink:href="#icn-design"></use>
-            </svg>
-            <h3>Design</h3>
-            <p>I design aesthetically pleasing, readable, browsable, and responsive content. I like to use an iterative process, I start fantastical and then strip the design down to only the optimal.</p>
-          </div>
-        </article>
-        <article class="skill">
-          <div class="skill-wrap" >
-            <svg class="icn icn-front-end" id="animation-2">
-              <use xlink:href="#icn-front-end"></use>
-            </svg>
-            <h3>Front-End</h3>
-            <p>I build accessible interactive content that solves problems. I keep code semantic and optimized by following best practices.</p>
-          </div>
-        </article>
-        <article class="skill">
-          <div class="skill-wrap">
-            <svg class="icn icn-ux" id="animation-3">
-              <use xlink:href="#icn-ux"></use>
-            </svg>
-            <h3>User Experience</h3>
-            <p>I strive to create a better relationship between humans and technology by creating an intuitive experience. My goal is not to dazzle or force the user but allow the user to follow their own flow.</p>
-          </div>
-        </article>
+        <div class="skills-wrap">
+          <article class="skill">
+            <div class="skill-wrap">
+              <svg class="icn icn-design" id="animation-1">
+                <use xlink:href="#icn-design"></use>
+              </svg>
+              <h3>Design</h3>
+              <p>I design aesthetically pleasing, readable, browsable, and responsive content. I like to use an iterative process, I start fantastical and then strip the design down to only the optimal.</p>
+            </div>
+          </article>
+          <article class="skill">
+            <div class="skill-wrap" >
+              <svg class="icn icn-front-end" id="animation-2">
+                <use xlink:href="#icn-front-end"></use>
+              </svg>
+              <h3>Front-End</h3>
+              <p>I build accessible interactive content that solves problems. I keep code semantic and optimized by following best practices.</p>
+            </div>
+          </article>
+          <article class="skill">
+            <div class="skill-wrap">
+              <svg class="icn icn-ux" id="animation-3">
+                <use xlink:href="#icn-ux"></use>
+              </svg>
+              <h3>User Experience</h3>
+              <p>I strive to create a better relationship between humans and technology by creating an intuitive experience. My goal is not to dazzle or force the user but allow the user to follow their own flow.</p>
+            </div>
+          </article>
+        </div>
       </section>
       <section class="section projects" id="work">
           <h1 class="title">Work</h1>
           <article class="project">
               <div class="project__img">
-                <img src="assets/img/img_househappy.jpg" alt="">
+                <a href="https://www.househappy.org/" target="_blank" alt="Househappy.org">
+                  <img src="assets/img/img_househappy.jpg" alt="Househappy">
+                </a>
               </div>
               <div class="project__info">
-                <h2>Househappy Web App</h2>
-                <p>As a UX designer at Househappy I worked on many different features, including a full redesign and rewrite of styles, making the design and code more moduler. I also helped design and develop new features.</p>
+                <a href="http://jerhel.com/" alt="Jerhel Website" target="_blank">
+                  <h2>Househappy Web App</h2>
+                </a>
+                <p>As a UX Designer at Househappy I worked on different features, including a full redesign and rewrite of styles, making the design and code more modular. I also help design and develop new features.</p>
                 <p class="tags">
                   <span>User Experience</span>
                   <span>Scss</span>
@@ -113,11 +135,15 @@
           </article>
           <article class="project">
               <div class="project__img">
-                <img src="assets/img/househappy-app.jpg" alt="">
+                <a href="https://itunes.apple.com/us/app/househappy-real-estate-search/id880240518?mt=8" alt="Househappy iPhone app" target="_blank">
+                  <img src="assets/img/househappy-app.jpg" alt="Househappy Image">
+                </a>
               </div>
               <div class="project__info">
-                <h2>Househappy iOS App</h2>
-                <p>As a UX designer at Househappy I was responsible for user experience, prototyping, and designing both Househappy's iPhone and iPad app.</p>
+                <a href="https://itunes.apple.com/us/app/househappy-real-estate-search/id880240518?mt=8" alt="Househappy iPhone app" target="_blank">
+                  <h2>Househappy iOS App</h2>
+                </a>
+                <p>As a UX designer at Househappy I was responsible for user experience, prototyping, and designing on both Househappy's iPhone and iPad app.</p>
                 <p class="tags">
                   <span>User Experience</span>
                   <span>Wireframing</span>
@@ -127,27 +153,14 @@
           </article>
           <article class="project">
               <div class="project__img">
-                <img src="assets/img/img_portfolio.jpg" alt="">
+                <a href="http://jerhel.com/" alt="Jerhel Website" target="_blank">
+                  <img src="assets/img/img_design4.jpg" alt="Jerhel">
+                </a>
               </div>
               <div class="project__info">
-                <h2>Portfolio Site v1</h2>
-                <p>As a UX designer at Househappy I worked on many different features, including a full redesign and rewrite of styles, making the design and code more moduler. I also helped design and develop new features.</p>
-                <p class="tags">
-                  <span>User Experience</span>
-                  <span>Scss</span>
-                  <span>HTML5</span>
-                  <span>Middleman</span>
-                  <span>Responsive Design</span>
-                  <span>Design</span>
-                </p>
-              </div>
-          </article>
-          <article class="project">
-              <div class="project__img">
-                <img src="assets/img/img_design4.jpg" alt="">
-              </div>
-              <div class="project__info">
-                <h2>Jerhel Redesign</h2>
+                <a href="http://jerhel.com/" alt="Jerhel Website" target="_blank">
+                 <h2>Jerhel Redesign</h2>
+                </a>
                 <p>Redesign Jerhel's website. Make all interactions more user friendly. Make website usable on all devices</p>
                 <p class="tags">
                   <span>User Experience</span>
@@ -160,35 +173,58 @@
                 </p>
               </div>
           </article>
+          <article class="project">
+              <div class="project__img">
+                <a href="" alt="Jason Swezoff Portfolio 1" target="_blank">
+                  <img src="assets/img/img_portfolio.jpg" alt="Jason's Portfolio">
+                </a>
+              </div>
+              <div class="project__info">
+                <a href="" alt="Jason Swezoff Portfolio 1" target="_blank">
+                  <h2>Portfolio Site v1</h2>
+                </a>
+                <p>This was the first version of this website. My goal was not only to build a portfolio website to showcase my skills but also to have a place to experiment with new tools and ideas.</p>
+                <p class="tags">
+                  <span>User Experience</span>
+                  <span>Scss</span>
+                  <span>HTML5</span>
+                  <span>Middleman</span>
+                  <span>Responsive Design</span>
+                  <span>Design</span>
+                </p>
+              </div>
+          </article>
       </section>
     </main>
     <footer class="mainFooter">
-      <div class="thanks zetta" id="contact">
-          Thanks for stopping by! Please, get in touch if you have any questions.
-          <a id="contact-link" href="mailto:swetzoff@gmail.com">
-          <svg class="icn-mail">
-          <use xlink:href="#icn-mail"></use>
-          </svg>
+      <div class="thanks" id="contact">
+        <div class="thanks-inner">
+          <span class="zetta">
+          Thanks for checking out my portfolio. Please get in touch if you have any questions.
+          </span>
+          <a id="contact-link" class="btn" href="mailto:swetzoff@gmail.com">
+            Email Me
           </a>
+        </div>
       </div>
       <div class="social-wrap">
         <ul class="social">
-          <li><a href="https://twitter.com/Jaswetz">
+          <li><a href="https://twitter.com/Jaswetz" alt="Jason's Twitter" target="_blank">
             <svg class="icn-twitter">
               <use xlink:href="#icn-twitter"></use>
             </svg>
           </a></li>
-          <li><a href="http://dribbble.com/Jaswetz">
+          <li><a href="http://dribbble.com/Jaswetz" alt="Jason's Dribbble" target="_blank">
               <svg class="icn-dribbble">
                 <use xlink:href="#icn-dribbble"></use>
               </svg>
           </a></li>
-          <li><a href="https://github.com/Jaswetz">
+          <li><a href="https://github.com/Jaswetz" alt="Jason's Github" target="_blank">
               <svg class="icn-github">
                 <use xlink:href="#icn-github"></use>
               </svg>
           </a></li>
-          <li><a href="http://www.linkedin.com/in/swetzoff">
+          <li><a href="http://www.linkedin.com/in/swetzoff" alt="Jason's LikedIn" target="_blank">
               <svg class="icn-linkedin">
                 <use xlink:href="#icn-linkedin"></use>
               </svg>
@@ -215,12 +251,10 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
+      ga('create', 'UA-38074716-1', 'auto');
       ga('send', 'pageview');
     </script>
 
   </body>
 </html>
-<div style="height: 0; width: 0; position: absolute; visibility: hidden; display: none;">
-<!-- inject:svg --><!-- endinject -->
-</div>
+

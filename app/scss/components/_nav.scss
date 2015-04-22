@@ -28,6 +28,12 @@
     .logo {
         text-align: center;
         padding-top: $baseSpacing * 0.5;
+        @extend %transition-default;
+        &:hover,
+        &:active,
+        &:focus {
+            opacity: .75;
+        }
         @include breakpoint(phablet) {
             text-align: left;
             padding-top: $baseSpacing * 1.5;

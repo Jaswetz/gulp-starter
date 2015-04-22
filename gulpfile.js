@@ -115,29 +115,34 @@ gulp.task('copyHtml', function() {
 });
 
 
-// // Compile Build JavaScript
-// gulp.task('buildJs', function() {
+// Compile Build JavaScript
+gulp.task('buildJs', function() {
 
-//     return gulp.src('app/js/*.js')
-//         .pipe(jshint('.jshintrc'))
-//         .pipe(jshint.reporter('default'))
-//         .pipe(concat('main.js'))
-//         .pipe(gulp.dest('build/production/assets/js'))
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('build/production/assets/js'))
-//         .pipe(notify({ message: 'Scripts task complete' }));
+    gulp.src('bower_components/modernizr/modernizr.js')
+        .pipe(gulp.dest('build/production/assets/js/vendor'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/production/assets/js/vendor'));
 
-//     return gulp.src('app/js/vendor/**/*.js')
-//         .pipe(jshint('.jshintrc'))
-//         .pipe(jshint.reporter('default'))
-//         .pipe(concat('main.js'))
-//         .pipe(gulp.dest('build/production/assets/js/vendor'))
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('build/production/assets/js/vendor'))
-//         .pipe(notify({ message: 'Scripts task complete' }));
-// });
+    gulp.src('bower_components/jquery/dist/jquery.js')
+        .pipe(gulp.dest('build/production/assets/js/vendor'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/production/assets/js/vendor'));
+
+    gulp.src(['bower_components/greensock/src/uncompressed/TweenMax.js',
+            'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
+            'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+            'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js',
+            'app/js/main.js'])
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('build/production/assets/js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('build/production/assets/js'))
+        .pipe(notify({ message: 'Scripts task complete' }));
+
+});
 
 // Compile Development JavaScript
 gulp.task('devJs', function() {
@@ -145,12 +150,14 @@ gulp.task('devJs', function() {
     gulp.src('bower_components/modernizr/modernizr.js')
         .pipe(gulp.dest('build/development/assets/js/vendor'));
 
-    gulp.src('bower_components/jquery/dist/jquery.min.js')
+    gulp.src('bower_components/jquery/dist/jquery.js')
         .pipe(gulp.dest('build/development/assets/js/vendor'));
 
-    gulp.src(['bower_components/greensock/src/uncompressed/TweenMax.js', 'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js', 'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js', 'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js', 'app/js/main.js'])
-        // .pipe(jshint('.jshintrc'))
-        // .pipe(jshint.reporter('default'))
+    gulp.src(['bower_components/greensock/src/uncompressed/TweenMax.js',
+            'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
+            'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+            'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js',
+            'app/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/development/assets/js'));
 });
@@ -221,5 +228,5 @@ gulp.task('watch', ['browser-sync', 'styleguide'], function () {
 
 gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 gulp.task('serve', [ 'styleguide', 'devImg', 'devJs', 'copyHtml', 'styles', 'watch']);
-gulp.task('build',['cleanBuild', 'buildStyles', 'buildImg', 'buildJs', 'miniHtml'], function() {});
+gulp.task('build',['buildStyles', 'buildImg', 'buildJs', 'miniHtml'], function() {});
 

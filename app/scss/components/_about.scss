@@ -39,10 +39,10 @@
     background: lighten($grayLight, 3%);
     padding: ($baseSpacing * .5) ($baseSpacing * .25);
     margin-bottom: $baseSpacing;
+    height: 100%;
 
     @include breakpoint(tablet) {
         padding: ($baseSpacing * .25) ($baseSpacing * .5);
-        // height: 285px;
     }
 
     .icn {
