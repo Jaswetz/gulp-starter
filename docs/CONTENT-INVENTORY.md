@@ -23,7 +23,7 @@ I strive to create a better relationship between humans and technology by creati
 As a UX Designer at Househappy I worked on different features, including a full redesign and rewrite of styles, making the design and code more modular. I also help design and develop new features.
 
 ### Househappy iOS App
-As a UX designer at Househappy I was responsible for user experience, prototyping, and designing on both Househappy's iPhone and iPad app.
+As a UX designer at Househappy I am responsible for user experience, prototyping, and designing on both Househappy's iPhone and iPad app.
 
 ### Jerhel Redesign
 I was hired to redesign Jerhel's website. The goal was to make all interactions more user-friendly and make the website usable on all devices.

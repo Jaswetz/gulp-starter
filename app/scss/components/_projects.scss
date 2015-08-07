@@ -22,6 +22,15 @@
             }
         }
     }
+    img {
+        @extend %transition-default;
+        border: .2rem solid $grayLight;
+        &:hover,
+        &:active,
+        &:focus {
+            border: .2rem solid $blue;
+        }
+    }
     @include breakpoint(phablet) {
         text-align: left;
         h2 {
