@@ -2,6 +2,18 @@
    Buttons
    ========================================================================== */
 
+// Buttons
+//
+// Buttons and things you click on
+//
+// markup:
+// <span class="sg-style">
+// <button class='btn' type='button'>Button button</button>
+// <a class="btn" href="#" role="button">Link button</a>
+// <span>
+//
+// Styleguide 5.0
+
 .btn {
     @extend %transition-default;
     font: inherit;
@@ -12,18 +24,17 @@
     overflow: visible;
     margin: 0;
     padding: 0.25rem 0.7500rem;
-    color: $blue;
-    border: 0.2rem solid $blue;
-    border-radius: 0.25rem;
-    background: $white;
+    color: $colorBtnText;
+    border: $borderBtnWidth solid $colorBtnBorder;
+    border-radius: $borderBtnBorderRadius;
+    background: $grayLight;
     cursor: pointer;
-
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        color: $white;
-        background: $blue;
+        color: $colorBtnText--hover;
+        background: $colorBtn--hover;
     }
 }
 

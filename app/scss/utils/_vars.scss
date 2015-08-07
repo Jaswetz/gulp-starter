@@ -104,3 +104,12 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
 
 // Base spacing
 $baseSpacing: 1.5rem;
+
+// Buttons
+$colorBtn: $grayLight;
+$colorBtn--hover: lighten($grayLight, 5%);
+$colorBtnText: $grayDark;
+$colorBtnText--hover: $grayDark;
+$colorBtnBorder: $grayLight;
+$borderBtnWidth: .1rem;
+$borderBtnBorderRadius: .1rem;
