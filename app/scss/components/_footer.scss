@@ -19,31 +19,36 @@
         vertical-align: middle;
         display: inline-block;
         padding: $baseSpacing * 0.5;
-
         &:hover,
         &:active,
         &:focus {
             text-decoration: none;
-            opacity: .75;
+            opacity: 0.75;
         }
     }
     svg {
         width: 25px;
         height: 25px;
-        fill: white;
+
+        fill: $white;
     }
 }
 
-.thanks-inner {
-    @extend .island;
+.thanks {
+    @extend .pull-double;
+    @extend .pad-top-double;
+    @extend .pad-bottom-double;
     text-align: center;
-    margin-bottom: $baseSpacing;
-    border: 0.1rem solid darken($blueSecondary, 2%);
-    background: $blueSecondary;
-
+    border-top: $borderWidth solid $blue;
+    border-bottom: $borderWidth solid lighten($blue, 15%);
+    background: lighten($blue, 10%);
     .zetta {
         display: block;
         margin-bottom: $baseSpacing;
+        color: $white;
+    }
+    a.btn {
+      margin-top: $baseSpacing;
     }
 }
 

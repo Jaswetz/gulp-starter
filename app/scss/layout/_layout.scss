@@ -25,6 +25,8 @@ main {
 
 .section {
     @extend .pad-bottom-double;
+    @extend .pad-top-double;
+    border-top: $borderWidth solid $white;
     @include full;
     @extend .clearfix;
     position: relative;
@@ -67,6 +69,9 @@ main {
     }
     .about__img {
         @include span(full);
+        @include breakpoint(mobileonly) {
+            margin-bottom: $baseSpacing;
+        }
         @include breakpoint(phablet) {
             @include span(4);
         }
@@ -87,8 +92,10 @@ main {
 
 .skill {
     text-align: center;
+    margin-bottom: $baseSpacing;
     @include breakpoint(tablet) {
         @include span(4);
+        margin-bottom: 0;
     }
 }
 
@@ -144,7 +151,7 @@ main {
 }
 
 .thanks {
-    @include span(12)
+    @include span(full);
 }
 
 

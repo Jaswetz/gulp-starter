@@ -2,7 +2,33 @@
    Intro - Landing area
    ========================================================================== */
 
+.intro--pattern {
+    position: absolute;
+    z-index: 1;
+    display: table;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    margin: 0;
+    background: url(../img/grid.png) repeat center center fixed;
+    background-size: cover;
+}
+
+.intro--cover {
+    position: absolute;
+    display: table;
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    margin: 0;
+    background: rgba($blue, 0.9);
+    background-size: cover;
+}
+
 .intro {
+    @include breakpoint(laptop) {
+        background-image: url(../img/bg-tools--large.jpg);
+    }
     display: table;
     width: 100%;
     max-width: none;
@@ -11,28 +37,27 @@
     background: url(../img/bg-tools--small.jpg) no-repeat center center fixed;
     background-color: $blue;
     background-size: cover;
-    @include breakpoint(laptop) {
-        background-image: url(../img/bg-tools--large.jpg);
-    }
     .hgroup {
+        @include breakpoint(tablet) {
+            padding: 0% 20%;
+        }
         text-align: center;
         vertical-align: middle;
         display: table-cell;
         height: 100%;
         padding: ($baseSpacing * 10) 0;
         padding: 0% 10%;
-        @include breakpoint(tablet) {
-            padding: 0% 20%;
-        }
         .introHeader {
             @extend .yotta;
-            font-size: 1.6018rem;
-            line-height: 1.5;
-            color: $white;
             @include breakpoint(tablet) {
               font-size: 2.2807rem;
               line-height: 1.3154;
             }
+            font-size: 1.6018rem;
+            line-height: 1.5;
+            position: relative;
+            z-index: 2;
+            color: $white;
             .normal {
                 @include breakpoint(tablet) {
                     font-size: 1.5rem;
@@ -45,6 +70,8 @@
         @extend %transition-default;
         font-size: $baseSpacing;
         text-decoration: none;
+        position: relative;
+        z-index: 2;
         margin-top: $baseSpacing;
         padding: 0 0.6rem;
         color: $white;

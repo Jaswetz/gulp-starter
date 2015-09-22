@@ -3,8 +3,8 @@
    ========================================================================== */
 
 .about {
+    border-bottom: 0.1rem solid darken($grayLight, 2.5%);
     background: $grayLight;
-    border-bottom: .1rem solid darken($grayLight, 2.5%);
 }
 
 .about__wrapper {
@@ -17,13 +17,12 @@
 }
 
 .about__img {
-    margin: 0;
     text-align: center;
-
+    margin: 0;
     img {
         max-width: 250px;
+        border: ($borderWidth * 2) solid $colorHighlight;
         border-radius: 50%;
-        border: .2rem solid $white;
 
         @include breakpoint(phablet) {
             max-width: inherit;
@@ -36,18 +35,19 @@
    ========================================================================== */
 
 .skill-wrap {
-    background: lighten($grayLight, 3%);
-    padding: ($baseSpacing * .5) ($baseSpacing * .25);
-    margin-bottom: $baseSpacing;
     height: 100%;
-
-    @include breakpoint(tablet) {
-        padding: ($baseSpacing * .25) ($baseSpacing * .5);
+    margin-bottom: $baseSpacing;
+    padding: ($baseSpacing * 0.5) ($baseSpacing * 0.25);
+    background: lighten($grayLight, 3%);
+    border: ($borderWidth * 2) solid $white;
+    @include breakpoint(mobileonly) {
+        margin-bottom: $baseSpacing;
     }
-
+    @include breakpoint(tablet) {
+        padding: ($baseSpacing * 0.25) ($baseSpacing * 0.5);
+    }
     .icn {
         width: 100%;
         margin-top: $baseSpacing;
     }
-
 }
