@@ -133,6 +133,7 @@ gulp.task('buildJs', function() {
             'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
             'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
             'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js',
+            'bower_components/wow/dist/wow.min.js',
             'app/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/production/assets/js'))
@@ -156,6 +157,7 @@ gulp.task('devJs', function() {
             'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
             'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
             'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js',
+            'bower_components/wow/dist/wow.min.js',
             'app/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/development/assets/js'));
