@@ -40,9 +40,6 @@
     padding: ($baseSpacing * 0.5) ($baseSpacing * 0.25);
     background: lighten($grayLight, 3%);
     border: ($borderWidth * 2) solid $white;
-    @include breakpoint(mobileonly) {
-        margin-bottom: $baseSpacing;
-    }
     @include breakpoint(tablet) {
         padding: ($baseSpacing * 0.25) ($baseSpacing * 0.5);
     }

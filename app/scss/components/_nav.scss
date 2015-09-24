@@ -71,6 +71,10 @@
 .js-navbar.scrollNav {
     border-bottom: $borderWidth solid $blue;
     background: $white;
+    li.current a {
+        background: $blue;
+        color: $white;
+    }
     .nav-item {
         padding: ($baseSpacing * 0.5) 0;
         color: $blue;
