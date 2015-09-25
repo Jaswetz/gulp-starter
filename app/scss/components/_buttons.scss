@@ -12,9 +12,10 @@
 // <a class="btn" href="#" role="button">Link button</a>
 // <span>
 //
-// Styleguide 5.0
+// Styleguide 2.2
 
-.btn {
+.btn,
+a.btn {
     @extend %transition-default;
     font: inherit;
     text-align: center;

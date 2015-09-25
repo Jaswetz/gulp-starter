@@ -1,0 +1,75 @@
+// Input boxes
+//
+// Styles for input boxes
+//
+// default - Default input
+// :hover - Hovered input
+// :focus - Focused input
+// :active - Active input
+//
+// markup:
+// <span class="sg-style">
+// <input class="{$modifiers}" type="text" value="Default text box">
+// <input class="{$modifiers}" type="text" placeholder="Default placeholder">
+// <input class="{$modifiers}" type="search" value="Search text box">
+// </span>
+//
+// Styleguide 2.3
+
+input {
+  font-weight: 300;
+  margin: $baseSpacing * .5;
+  padding: $baseSpacing * .5;
+
+  border: $borderWidth solid $gray;
+
+  // &:focus {
+  //   background-color: $tertiary-color;
+  //   border: 1px solid $secondary-color;
+  // }
+}
+
+// specify the background color of form elements
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+}
+
+// specify inheritance of form elements
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+// specify the minimum height of form elements
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  min-height: if(unitless($lineHeight), #{$lineHeight}em, if(unit($lineHeight) != '%', $lineHeight, null));
+}

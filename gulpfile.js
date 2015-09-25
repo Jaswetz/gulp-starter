@@ -130,11 +130,7 @@ gulp.task('buildJs', function() {
         .pipe(uglify())
         .pipe(gulp.dest('build/production/assets/js/vendor'));
 
-    gulp.src(['bower_components/greensock/src/uncompressed/TweenMax.js',
-            'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
-            'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
-            'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js',
-            'app/js/main.js'])
+    gulp.src(['app/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/production/assets/js'))
         .pipe(rename({suffix: '.min'}))
@@ -153,11 +149,7 @@ gulp.task('devJs', function() {
     gulp.src('bower_components/jquery/dist/jquery.js')
         .pipe(gulp.dest('build/development/assets/js/vendor'));
 
-    gulp.src(['bower_components/greensock/src/uncompressed/TweenMax.js',
-            'bower_components/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js',
-            'bower_components/ScrollMagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
-            'bower_components/greensock/src/uncompressed/plugins/ScrollToPlugin.js',
-            'app/js/main.js'])
+    gulp.src(['app/js/main.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/development/assets/js'));
 });

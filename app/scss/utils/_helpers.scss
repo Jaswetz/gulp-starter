@@ -6,7 +6,7 @@
 //
 // Small classes that help.
 //
-// Styleguide 4.0
+// Styleguide 3.0
 
 
 /*
@@ -85,7 +85,7 @@
 //
 // Classes for styling and placing text.
 //
-// Styleguide 4.1
+// Styleguide 3.1
 
 .text-left {
   text-align: left;
@@ -115,7 +115,7 @@
 //
 // Classes for margins and padding.
 //
-// Styleguide 4.2
+// Styleguide 3.2
 
 .push {
   margin-bottom: 1.5rem;
@@ -209,20 +209,20 @@
 //
 // Help styling lists
 //
-// Styleguide 4.3
+// Styleguide 3.3
 
 // Inline lists
 //
 // Reset LI and Ul
 //
 // markup:
-// <ul class="listReset">
+// <ul class="listReset sg-style">
 //   <li><a>About</a></li>
 //   <li><a>Work</a></li>
 //   <li><a>Contact</a></li>
 // </ul>
 //
-// Styleguide 4.3.1
+// Styleguide 3.3.1
 
 .listReset {
   list-style: none;
@@ -235,13 +235,13 @@
 // Help styling lists
 //
 // markup:
-// <ul class="listInline">
+// <ul class="listInline sg-style">
 //   <li><a>About</a></li>
 //   <li><a>Work</a></li>
 //   <li><a>Contact</a></li>
 // </ul>
 //
-// Styleguide 4.3.2
+// Styleguide 3.3.2
 
 .listInline {
   @extend .listReset;

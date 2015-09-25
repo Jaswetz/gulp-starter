@@ -1,0 +1,42 @@
+// Buttons, Links, and Forms
+//
+// Links, buttons, Forms
+//
+// Styleguide 2.0
+
+// Links
+//
+// Link styles used in the styleguide
+//
+// .sg - Normal link
+// :hover - Hover
+// :active - Active
+// :visited - Visited
+//
+// markup:
+// <span class="sg-style">
+// <a href="#" class="sg {$modifiers}">Link text</a>
+// </span>
+//
+// Styleguide 2.1
+
+a {
+    color: $blue;
+    text-decoration: none;
+
+  &:visited {
+    color: darken($blue, 20%);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// .cta--primary {
+//   @include style-cta($blueSecondary, $icon-chevron-right);
+// }
+
+// .cta--secondary {
+//   @include style-cta($blueSecondary);
+// }

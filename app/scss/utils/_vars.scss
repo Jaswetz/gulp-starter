@@ -43,22 +43,18 @@ $nav_layout: layout(12 0 fluid float inside);
     }
 }
 
-// Colors
+// Colors and Typography
 //
-// This section describes base colors
+// This section describes base colors and typography
 //
 // Styleguide 1.0
 
 // Main colors
 //
 // $blue - Blue color
-// $blueSecondary - Secondary blue color
 // $green - Green color
-// $greenSecondary - Secondary green color
 // $red - Red color
-// $redSecondary - Secondary red color
 // $yellow - Yellow color
-// $yellowSecondary - Secondary yellow color
 // $gray - Gray color
 // $grayLight - Light gray color
 // $grayDark - Dark gray color
@@ -87,6 +83,30 @@ $colorWarning: $yellowSecondary;
 $colorMuted: $gray;
 $colorDanger: $red;
 
+// Calculated colors
+//
+// .blueSecondary - Secondary blue color
+// .greenSecondary - Secondary green color
+// .redSecondary - Secondary red color
+// .yellowSecondary - Secondary yellow color
+//
+// markup:
+// <div class="styleguide-color {$modifiers}"></div>
+//
+// Styleguide 1.1.1
+
+$blueSecondary: lighten($blue, 40%);
+.blueSecondary { background-color: $blueSecondary; }
+
+$greenSecondary: lighten($green, 30%);
+.greenSecondary { background-color: $greenSecondary; }
+
+$redSecondary: lighten($red, 30%);
+.redSecondary { background-color: $redSecondary; }
+
+$yellowSecondary: lighten($yellow, 20%);
+.yellowSecondary { background-color: $yellowSecondary; }
+
 // Defining font family
 $fontDefault: 'Open Sans', Helvetica, Arial, sans-serif;
 $fontHeader: 'PT Serif', Georgia, serif;
@@ -113,3 +133,6 @@ $colorBtnText--hover: $grayDark;
 $colorBtnBorder: $grayLight;
 $borderBtnWidth: .1rem;
 $borderBtnBorderRadius: .1rem;
+
+// Border
+$borderWidth: .1rem;
