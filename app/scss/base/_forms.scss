@@ -73,3 +73,26 @@ select,
 textarea {
   min-height: if(unitless($lineHeight), #{$lineHeight}em, if(unit($lineHeight) != '%', $lineHeight, null));
 }
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+  display: inline-block;
+  border: $borderWidth solid $gray;
+  box-shadow: inset 0 $borderWidth ($borderWidth * 2) $grayLight;
+  vertical-align: middle;
+}
