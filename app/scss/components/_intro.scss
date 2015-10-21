@@ -2,25 +2,33 @@
    Intro - Landing area
    ========================================================================== */
 
-.intro--pattern {
+.intro--pattern,
+.intro--cover,
+.process--pattern,
+.process--cover {
     position: absolute;
-    z-index: 1;
     display: table;
     width: 100%;
     max-width: none;
     height: 100vh;
     margin: 0;
+}
+
+.process--pattern,
+.process--cover {
+    height: 50vh;
+}
+
+.intro--pattern,
+.process--pattern {
+    z-index: 2;
     background: url(../img/grid.png) repeat center center fixed;
     background-size: cover;
 }
 
-.intro--cover {
-    position: absolute;
-    display: table;
-    width: 100%;
-    max-width: none;
-    height: 100vh;
-    margin: 0;
+.intro--cover,
+.process--cover {
+    z-index: 1;
     background: rgba($blue, 0.9);
     background-size: cover;
 }
@@ -83,4 +91,16 @@
             opacity: 0.75;
         }
     }
+}
+
+.process {
+    display: table;
+    width: 100%;
+    max-width: none;
+    height: 50vh;
+    margin: 0;
+    background: url(../img/bg-tools--small.jpg) no-repeat center center fixed;
+    background-color: $blue;
+    background-size: cover;
+    position: relative;
 }
