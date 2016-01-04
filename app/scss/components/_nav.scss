@@ -64,11 +64,13 @@
     }
 }
 
+
 /*
    Header animation on scroll
    ========================================================================== */
 
-.js-navbar.scrollNav {
+.js-navbar.scrollNav,
+.p-process .js-navbar  {
     border-bottom: $borderWidth solid $blue;
     background: $white;
     li.current a {

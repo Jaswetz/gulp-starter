@@ -2,10 +2,11 @@
    About section
    ========================================================================== */
 
-.about {
-    border-bottom: 0.1rem solid darken($grayLight, 2.5%);
-    background: $grayLight;
-}
+// .about,
+// .process {
+//     border-bottom: 0.1rem solid darken($grayLight, 2.5%);
+//     background: $grayLight;
+// }
 
 .about__wrapper {
     @extend .push-double;
@@ -39,7 +40,7 @@
     margin-bottom: $baseSpacing;
     padding: ($baseSpacing * 0.5) ($baseSpacing * 0.25);
     background: lighten($grayLight, 3%);
-    border: ($borderWidth * 2) solid $white;
+    border: $borderWidth solid $grayLight;
     @include breakpoint(tablet) {
         padding: ($baseSpacing * 0.25) ($baseSpacing * 0.5);
     }

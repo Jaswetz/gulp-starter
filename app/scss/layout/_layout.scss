@@ -24,8 +24,8 @@ main {
 }
 
 .section {
-    @extend .pad-bottom-double;
-    @extend .pad-top-double;
+    @extend .margin-bottom-double;
+    @extend .pad-top;
     border-top: $borderWidth solid $white;
     @include full;
     @extend .clearfix;
@@ -42,20 +42,29 @@ main {
     .brand {
         @include span(full);
         @include breakpoint(phablet) {
+            @include span(5);
+        }
+        @include breakpoint(tablet) {
             @include span(6);
         }
-
-        @include breakpoint(laptop) {
-            @include span(9);
+    }
+    > ul {
+        @include span(full);
+        @include breakpoint(phablet) {
+            @include span(7);
+        }
+        @include breakpoint(tablet) {
+            @include span(6);
         }
     }
+
     > ul li {
-        @include span(4 of $nav_layout);
-        @include breakpoint(phablet) {
-            @include span(2 of $nav_layout);
-        }
-        @include breakpoint(laptop) {
-            @include span(1 of $nav_layout);
+        @include span(3 of $nav_layout);
+        > a {
+            font-size: .8rem;
+            @include breakpoint(phablet) {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -124,6 +133,28 @@ main {
 }
 
 
+
+/*
+   #Process
+   ========================================================================== */
+
+.what-is {
+    @include span(12);
+
+    @include breakpoint(tablet) {
+        @include span(5);
+    }
+}
+
+.career {
+    @include span(12);
+
+    @include breakpoint(tablet) {
+        @include span(7);
+    }
+}
+
+
 /*
    Design Examples
    ========================================================================== */
@@ -140,6 +171,7 @@ main {
         }
     }
 }
+
 
 
 /*

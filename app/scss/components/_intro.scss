@@ -33,6 +33,14 @@
     background-size: cover;
 }
 
+// .process--cover {
+//     @include breakpoint(laptop) {
+//         background-image: url(../img/banner-process.jpg);
+//         width: 100%;
+//         height: $baseSpacing * 10;
+//     }
+// }
+
 .intro {
     @include breakpoint(laptop) {
         background-image: url(../img/bg-tools--large.jpg);
@@ -93,14 +101,4 @@
     }
 }
 
-.process {
-    display: table;
-    width: 100%;
-    max-width: none;
-    height: 50vh;
-    margin: 0;
-    background: url(../img/bg-tools--small.jpg) no-repeat center center fixed;
-    background-color: $blue;
-    background-size: cover;
-    position: relative;
-}
+
