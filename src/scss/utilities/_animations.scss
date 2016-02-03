@@ -1,0 +1,14 @@
+// Animations
+
+.fade-up {
+    transform: translateY(0);
+    transition: opacity 1s ease,
+                transform 1s ease;
+    opacity: 1.0;
+
+    &.inactive,
+    body.is-loading & {
+        opacity: 0;
+        transform: translateY($spacing);
+    }
+}

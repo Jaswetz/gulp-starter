@@ -1,0 +1,151 @@
+// Buttons
+//
+// The buttons using the UI colors will mostly be used in applications.
+//
+// markup:
+// <div class="field-container">
+// <button class='btn btn--default' type='button'>Button Default</button>
+// <button class='btn btn--success' type='button'>Button Success</button>
+// <button class='btn btn--error' type='button'>Button Error</button>
+// <button class='btn btn--warning' type='button'>Button Warning</button>
+// <button class='btn btn--info' type='button'>Button Info</button>
+// </div><div class="field-container">
+// <button class='btn btn--outline btn--outline--default' type='button'>Button Default</button>
+// <button class='btn btn--outline btn--outline--success' type='button'>Button Success</button>
+// <button class='btn btn--outline btn--outline--error' type='button'>Button Error</button>
+// <button class='btn btn--outline btn--outline--warning' type='button'>Button Warning</button>
+// <button class='btn btn--outline btn--outline--info' type='button'>Button Info</button>
+// </div><div class="field-container">
+// <button class='btn btn--text' type="button">Text Button</button>
+// <button class='btn btn--default' type='button' disabled>Button Default</button>
+// </div>
+//
+// Styleguide 1.3
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    font-family: $font-family--secondary;
+    font-size: $font-size--small;
+    font-weight: $font-weight--medium;
+    letter-spacing: 1px;
+    line-height: $base__line-height;
+    display: inline-block;
+    padding: ($spacing--small / 2) $spacing;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    border-width: $button__border--width;
+    border-style: solid;
+    border-radius: $border__radius;
+    transition: background $transition__time ease-out,
+                color $transition__time ease-out;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: darken($color--grey, 20%);
+        border-color: $color--grey;
+        background: $color--grey;
+
+        &:hover {
+            color: darken($color--grey, 20%);
+            border-color: $color--grey;
+            background: $color--grey;
+        }
+    }
+}
+
+.btn {
+    @include button-colors($ui-colors);
+}
+
+.btn--outline {
+    @include button-colors--outline($ui-colors);
+}
+
+.btn--text {
+    color: $color--blue;
+    border: none;
+    background: none;
+
+    &:hover,
+    &:focus {
+        color: lighten($color--blue, 10%);
+    }
+}
+
+// Theme Buttons
+//
+// markup:
+// <section class="style1 padding--full">
+// <button class='btn btn--theme1' type='button'>Button Default</button>
+// <button class='btn btn--theme1--solid' type='button'>Button Default</button>
+// </section>
+// <section class="style2 padding--full">
+// <button class='btn btn--theme2' type='button'>Button Default</button>
+// <button class='btn btn--theme2--solid' type='button'>Button Default</button>
+// </section>
+//
+// Styleguide 1.3.1
+
+.btn--theme1 {
+    border-color: $color__fg2;
+    color: $color__fg2--bold;
+
+    &:hover {
+        background: $color__fg2--light;
+    }
+}
+
+.btn--theme1--solid {
+    border-color: $color__fg2--bold;
+    color: $color__fg1--bold;
+    background: $color__fg2--bold;
+
+    &:hover {
+        background: $color__fg2--light;
+        color: $color__fg2--bold;
+    }
+}
+
+.btn--theme2 {
+    border-color: $color__fg1;
+    color: $color__fg1--bold;
+
+    &:hover {
+        background: $color__fg1--light;
+    }
+}
+
+.btn--theme2--solid {
+    border-color: $color__fg1--bold;
+    background: $color__fg1--bold;
+    color: $color__fg2--bold;
+
+    &:hover {
+        background: $color__fg2;
+        color: $color__fg1--bold;
+    }
+}
+
+// Buttons Placement
+//
+// markup:
+// <div class="field-container">
+// <button class='btn btn--default btn--fit' type='button'>Button Default</button>
+// </div>
+//
+// Styleguide 1.3.2
+
+.btn--fit {
+    display: block;
+    width: 100%;
+}

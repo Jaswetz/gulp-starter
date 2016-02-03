@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Main Scss File: Importing all other files
+   ========================================================================== */
+
+@charset 'utf-8';
+
+// Foundation 2
+@import "../../bower_components/foundation-sites/scss/util/util";
+
+// Config
+// Config comes first to overide foundation base vars
+@import "utilities/config";
+
+// Foundation 2
+@import "../../bower_components/foundation-sites/scss/foundation";
+@include foundation-flex-grid;
+@include foundation-global-styles;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Istok+Web:400,400italic,700,700italic");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic");
+
+// Utils
+@import "utilities/reset";
+@import "utilities/utilities";
+@import "utilities/helpers";
+@import "utilities/grid";
+@import "utilities/animations";
+
+// Atoms
+@import "atoms/sg-atoms"; // Refrence only
+@import "atoms/sg-colors"; // Refrence only
+@import "atoms/body";
+@import "atoms/buttons";
+@import "atoms/forms";
+@import "atoms/links";
+@import "atoms/lists";
+@import "atoms/logo";
+@import "atoms/tables";
+@import "atoms/typography";
+
+// Molecules
+@import "molecules/sg-molecules"; // Refrence only
+@import "molecules/menu";
+
+// Organisms
+@import "organisms/sg-organisms"; // Refrence only
+@import "organisms/header"; // Refrence only
+@import "organisms/intro";
+@import "organisms/section";
+
+// Theme
+@import "theme";

@@ -1,0 +1,161 @@
+// Global Configurations
+//
+// This file contains global variables
+
+// Grid
+
+$global-width: rem-calc(1200);
+$grid-column-count: 12;
+
+// Breakpoints
+
+$breakpoints: (
+  small: 400px,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+// Font Stacks
+
+$font-family--primary: "Lora", "Times New Roman", serif;;
+$font-family--secondary: "Istok Web", "Helvetica Neu", Helvetica, Arial, sans-serif;
+
+// Font Size
+// http://www.modularscale.com/?1&rem&1.333&sass&table
+
+$font-size--small: 0.9rem;  // small text
+$font-size--normal: 1.2rem;      // body text
+$font-size--big: 1.6rem;  // large text
+$font-size--large: 2.132rem;   // main heading
+$font-size--xlarge: 2.842rem;   // main heading
+$font-size--xxlarge: 3.789rem;   // main heading
+$font-size--xxxlarge: 5.05rem;   // main heading
+
+// Font Weights
+
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
+
+// Text
+
+$base__font-size: $font-size--normal;
+$base__line-height: $font-size--normal * 1.55;
+$base__font-weight: $font-weight--medium;
+
+// Headings
+
+$base__font-family--heading: $font-family--secondary;
+$base__font-weight--heading: $font-weight--bold;
+$base__line-height--heading: $base__line-height * 1.5;
+
+// Line Height Grid
+
+$baseline-grid: true;
+$baseline-grid--line-height: 29;
+
+// Spacing
+
+$spacing: rem-calc($baseline-grid--line-height);
+$spacing--small: $spacing / 2;
+
+// Descrpitive Base Colors
+
+$color--white: #ffffff;
+$color--black: #0b0b0b;
+$color--grey--dark: #4b4b4b;
+$color--grey: #b1b1b1;
+$color--grey--light: #e4e4e4;
+$color--blue: #3372df;
+$color--teal: #33afdf;
+$color--green: #0f9d58;
+$color--purple: #b233df;
+$color--red: #cb4437;
+$color--yellow: #f4b400;
+
+// UI Colors
+
+$ui-colors: (
+    default: $color--blue,
+    success: $color--green,
+    error: $color--red,
+    warning: $color--yellow,
+    info: $color--teal
+);
+
+// Theme Colors
+
+$color__bg--light: #E4FDE1;
+$color__bg--dark: #456990;
+$color__accent1: #028090;
+$color__accent2: #114B5F;
+$color__accent3: #F45B69;
+
+$color__fg1: rgba($color--white, .6);
+$color__fg1--bold: $color--white;
+$color__fg1--light: rgba($color--white, .3);
+$color__fg2: rgba($color__bg--dark, .6);
+$color__fg2--bold: $color__bg--dark;
+$color__fg2--light: rgba($color__bg--dark, .3);
+
+// Border
+
+$border__radius: .1rem;
+$border--width: .1rem;
+$border--color: $color--grey;
+$border--style: solid;
+
+// Table
+
+$table__border--width: .1rem;
+$table__border--color: $color--grey;
+$table__border--style: solid;
+
+// Forms
+
+$forms__border--width: .1rem;
+$forms__border--color: $color--grey;
+$forms__border--style: solid;
+
+$forms__border--color--focus: $color--grey;
+
+// Blockquote
+
+$blockquote__border--width: .1rem;
+$blockquote__border--color: $color--grey;
+$blockquote__border--style: solid;
+$blockquote__background: $color--grey;
+
+// Button
+
+$button__border--width: .1rem;
+$button__font-stack: $font-family--secondary;
+
+// Path to Assets
+
+$path--rel: "../img";
+
+// Width
+
+$width__inner: 75rem;
+
+// Animations
+
+$transition__time: 0.2s;
+$transition__time--activation: 1s;
+
+// Foundation
+// Update Base styles because grid is using Foundations
+$global-font-size: 100% !default;
+$global-lineheight: $base__font-size;
+$body-background: transparent;
+$body-font-color: $color--black;
+$body-font-family: $font-family--primary;
+$global-margin: $spacing;
+$global-padding: $spacing;
+$global-weight-normal: $base__font-weight;
+$global-radius: $border__radius;

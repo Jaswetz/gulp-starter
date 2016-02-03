@@ -1,0 +1,57 @@
+// Utilities
+//
+// This file contains mixins and functions
+
+// Baseline Grid
+// http://basehold.it/
+
+
+    html {
+        background-image: url('http://basehold.it/i/#{$baseline-grid--line-height}');
+    }
+
+
+// Theme mixin
+
+// Solid Buttons
+@mixin button-colors($map) {
+  @each $theme, $color in $map {
+      &--#{$theme} {
+        color: darken($color, 30%);
+        border-color: $color;
+        background-color: $color;
+
+        &:hover,
+        &:focus {
+            color: $color;
+        }
+    }
+  }
+}
+
+// Outline Buttons
+@mixin button-colors--outline($map) {
+  @each $theme, $color in $map {
+      &--#{$theme} {
+        color: $color;
+        border-color: $color;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            color: darken($color, 30%);
+            background-color: $color;
+        }
+    }
+  }
+}
+
+// Image replace
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+    display: $disp;
+    width: $w;
+    height: $h;
+    background-image: url("#{$path--rel}/#{$img}");
+    background-repeat: no-repeat;
+}

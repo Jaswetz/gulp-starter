@@ -1,0 +1,24 @@
+// Logo
+//
+// markup:
+// <div class="logo">
+//     <a href="#" alt="logo" class="logo__link">
+//         <svg viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-linecap="round" clip-rule="evenodd" stroke-miterlimit="1.41421"><path d="m19.5 10l9 17h-18l9-17"/><g fill="none" stroke-width=".75"><circle cx="19.5" cy="19.5" r="16"/><path d="m.5.5h38v38h-38z"/></g></svg>
+//     </a>
+// </div>
+//
+// Styleguide 1.7.1
+
+.logo__link {
+    display: block;
+    max-width: $spacing * 3;
+    height: 100%;
+    max-height: $spacing * 3;
+    fill: $color--blue;
+    stroke: $color--blue;
+
+    > svg {
+        max-width: $spacing * 3;
+        max-height: $spacing * 3;
+    }
+}

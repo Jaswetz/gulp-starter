@@ -1,0 +1,54 @@
+// Helpers
+//
+// This file contains helper classes
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Screen reader text
+
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// For pseudo-elements
+
+%pseudos {
+    display: block;
+    content: '';
+    position: absolute;
+}
+
+.fullscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+
+    @include breakpoint(medium up) {
+        min-height: 100vh;
+    }
+
+}
+
+.padding--full {
+    padding: $spacing;
+}
+
+.margin--full {
+    margin: $spacing;
+}

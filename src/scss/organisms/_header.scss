@@ -1,0 +1,70 @@
+// Header
+//
+// markup:
+// <section>
+//     <nav class="menu">
+//         <ul class="menu__list menu__list--horiz">
+//             <li class="menu__item menu__item--horiz">
+//                 <a href="#" class="menu__link">Link 1</a>
+//             </li>
+//             <li class="menu__item menu__item--horiz">
+//                 <a href="#" class="menu__link">Link 2</a>
+//             </li>
+//             <li class="menu__item menu__item--horiz">
+//                 <a href="#" class="menu__link">Link 3</a>
+//             </li>
+//             <li class="menu__item menu__item--horiz">
+//                 <a href="#" class="menu__link">Link 4</a>
+//             </li>
+//             <li class="menu__item menu__item--horiz">
+//                 <a href="#" class="menu__link">Link 5</a>
+//             </li>
+//         </ul>
+//     </nav>
+// </section>
+//
+// Styleguide 3.1.1
+
+.menu__list {
+    position: relative;
+    height: $spacing * 3;
+
+    @media #{$medium-up} {
+        @extend .list--horiz;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-end;
+    }
+}
+
+.menu__item {
+    display: block;
+    margin-left: 0;
+    align-self: center;
+    @media #{$medium-up} {
+        @extend .list--horiz__item;
+        margin-left: $spacing--small;
+    }
+}
+
+.menu__link {
+    @extend %link;
+    display: block;
+    padding: $spacing--small $spacing;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-align: center;
+    text-align: center;
+    -webkit-touch-callout: none;
+     -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}

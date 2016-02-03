@@ -1,0 +1,16 @@
+// Body Styles
+//
+// This file contains the <body> and <html> styles
+
+// Responsive
+
+%text {
+    font-family: $font-family--primary;
+    font-size: $base__font-size;
+    font-weight: $base__font-weight;
+    line-height: $base__line-height;
+}
+
+.content {
+    position: relative;
+}

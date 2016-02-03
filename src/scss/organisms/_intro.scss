@@ -1,0 +1,32 @@
+// Intro
+//
+// Styleguide
+
+.intro {
+    background-image: url("../../app/img/intro.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-attachment: scroll;
+    background-position: top right;
+    background-size: 100% 100%;
+
+    .section__inner {
+        padding: ($spacing * 2) $spacing;
+    }
+
+    h1 {
+        color: $color__fg1--bold;
+    }
+
+    p {
+        color: $color__fg1;
+    }
+
+    .btn {
+        @extend .btn--fit;
+        @include breakpoint(small up) {
+            display: inline-block;
+            width: auto;
+        }
+    }
+}

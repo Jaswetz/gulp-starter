@@ -1,0 +1,75 @@
+// Tables
+//
+// markup:
+//  <table>
+//  	<thead>
+//  		<tr>
+//  			<th>Table Heading 1</th>
+//  			<th>Table Heading 2</th>
+//  			<th>Table Heading 3</th>
+//  			<th>Table Heading 4</th>
+//  			<th>Table Heading 5</th>
+//  		</tr>
+//  	</thead>
+//  	<tfoot>
+//  		<tr>
+//  			<th>Table Footer 1</th>
+//  			<th>Table Footer 2</th>
+//  			<th>Table Footer 3</th>
+//  			<th>Table Footer 4</th>
+//  			<th>Table Footer 5</th>
+//  		</tr>
+//  	</tfoot>
+//  	<tbody>
+//  	<tr>
+//  		<td>Table Cell 1</td>
+//  		<td>Table Cell 2</td>
+//  		<td>Table Cell 3</td>
+//  		<td>Table Cell 4</td>
+//  		<td>Table Cell 5</td>
+//  	</tr>
+//  	<tr>
+//  		<td>Table Cell 1</td>
+//  		<td>Table Cell 2</td>
+//  		<td>Table Cell 3</td>
+//  		<td>Table Cell 4</td>
+//  		<td>Table Cell 5</td>
+//  	</tr>
+//  	<tr>
+//  		<td>Table Cell 1</td>
+//  		<td>Table Cell 2</td>
+//  		<td>Table Cell 3</td>
+//  		<td>Table Cell 4</td>
+//  		<td>Table Cell 5</td>
+//  	</tr>
+//  	<tr>
+//  		<td>Table Cell 1</td>
+//  		<td>Table Cell 2</td>
+//  		<td>Table Cell 3</td>
+//  		<td>Table Cell 4</td>
+//  		<td>Table Cell 5</td>
+//  	</tr>
+//  	</tbody>
+//  </table>
+//
+// Styleguide 1.6
+
+table {
+    @extend %text;
+    width: 100%;
+
+    th,
+    td {
+        text-align: left;
+        border-bottom: $table__border--width $table__border--style $table__border--color;
+        padding: $spacing--small;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

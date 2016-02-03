@@ -1,0 +1,24 @@
+// Links
+//
+// markup:
+// <a href="#">Link</a>
+// <p>Lorem ipsum dolor sit amet, consectetur <a href="#">link</a> adipiscing elit.
+// Qualis ista philosophia est, quae non interitum afferat pravitatis.
+//
+// Styleguide 1.6.1
+
+
+%link {
+    font-family: $button__font-stack;
+    text-decoration: none;
+    color: $color--blue;
+    &:hover,
+    &:focus {
+        color: darken($color--blue, 20%);
+    }
+}
+
+p a,
+p a:visited {
+    @extend %link;
+}
